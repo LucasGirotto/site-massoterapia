@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espaço Zen | Massoterapia Profissional</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container navbar">
+            <div class="logo">Espaço Zen</div>
+            <nav>
+                <a href="#inicio">Início</a>
+                <a href="#procedimentos">Procedimentos</a>
+                <a href="#sobre">Sobre Mim</a>
+                <button class="btn-primary" onclick="abrirChat()">Agendar Consulta</button>
+            </nav>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="container hero-content">
+            <h1>Cuidado, Bem-Estar e Alívio das Dores</h1>
+            <p>Tratamentos personalizados de massoterapia para renovar as suas energias e cuidar da sua saúde física e mental.</p>
+            <button class="btn-lg" onclick="abrirChat()">Agendar Minha Sessão</button>
+        </div>
+    </section>
+
+    <section id="procedimentos" class="container section">
+        <h2 class="section-title">Nossos Procedimentos</h2>
+        <div class="gallery-grid">
+            <div class="gallery-card">
+                <div class="card-img" style="background-color: #d4c5b9; height: 200px; display: flex; align-items: center; justify-content: center; color: #5c4d41; font-weight: bold;">Massagem Relaxante</div>
+                <div class="card-body">
+                    <h3>Massagem Relaxante</h3>
+                    <p>Ideal para reduzir o stress, aliviar tensões musculares e promover um relaxamento profundo.</p>
+                </div>
+            </div>
+            <div class="gallery-card">
+                <div class="card-img" style="background-color: #c9d6c8; height: 200px; display: flex; align-items: center; justify-content: center; color: #3b4d3a; font-weight: bold;">Massagem Terapêutica</div>
+                <div class="card-body">
+                    <h3>Massagem Terapêutica</h3>
+                    <p>Focada no alívio de dores crónicas, contraturas e na melhoria da mobilidade muscular.</p>
+                </div>
+            </div>
+            <div class="gallery-card">
+                <div class="card-img" style="background-color: #e5dad4; height: 200px; display: flex; align-items: center; justify-content: center; color: #6e5548; font-weight: bold;">Drenagem Linfática</div>
+                <div class="card-body">
+                    <h3>Drenagem Linfática</h3>
+                    <p>Estimula o sistema linfático, reduzindo a retenção de líquidos e melhorando a circulação.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="bg-light section">
+        <div class="container sobre-grid">
+            <div class="sobre-text">
+                <h2>Sobre Mim</h2>
+                <p>Olá! Sou especialista em massoterapia com foco em tratamentos integrativos e bem-estar. O meu objetivo é proporcionar um atendimento humanizado e personalizado, entendendo a necessidade de cada paciente para aplicar a melhor técnica.</p>
+                <p>Combinando conhecimentos em anatomia e terapias corporais, ajudo-o(a) a viver com mais leveza, sem dores e com mais energia para o dia a dia.</p>
+            </div>
+            <div class="sobre-img" style="background-color: #ccc; min-height: 300px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #333; font-weight: bold;">
+                [Espaço para a Foto Dela]
+            </div>
+        </div>
+    </section>
+
+    <div id="chat-widget" class="chat-container">
+        <div class="chat-header">
+            <h3>Assistente Virtual</h3>
+            <button onclick="fecharChat()">&times;</button>
+        </div>
+        <div id="chat-messages" class="chat-messages">
+            <div class="message bot">Olá! Sou o assistente de agendamento automático. Clique no botão abaixo para iniciar a sua triagem e ficha de anamnese rápida.</div>
+        </div>
+        <div class="chat-input-area">
+            <button class="btn-primary" style="width: 100%; border-radius: 8px;" onclick="alert('Lógica do bot será implementada no JavaScript a seguir!')">Iniciar Triagem de Agendamento</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Pequena lógica de teste para abrir/fechar a janela do bot
+        function abrirChat() {
+            document.getElementById('chat-widget').style.display = 'flex';
+            document.getElementById('chat-widget').scrollIntoView({ behavior: 'smooth' });
+        }
+        function fecharChat() {
+            document.getElementById('chat-widget').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
