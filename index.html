@@ -68,28 +68,32 @@
         </div>
     </section>
 
-    <div id="chat-widget" class="chat-container">
+    <div id="chat-widget" class="chat-container" style="display: none;">
         <div class="chat-header">
             <h3>Assistente Virtual</h3>
             <button onclick="fecharChat()">&times;</button>
         </div>
+        
         <div id="chat-messages" class="chat-messages">
             <div class="message bot">Olá! Sou o assistente de agendamento automático. Clique no botão abaixo para iniciar a sua triagem e ficha de anamnese rápida.</div>
         </div>
+        
         <div class="chat-input-area">
-            <button class="btn-primary" style="width: 100%; border-radius: 8px;" onclick="alert('Lógica do bot será implementada no JavaScript a seguir!')">Iniciar Triagem de Agendamento</button>
+            <button class="btn-primary" style="width: 100%; border-radius: 8px;" onclick="iniciarAnamnese()">Iniciar Triagem de Agendamento</button>
         </div>
     </div>
 
     <script src="script.js"></script>
     <script>
-        // Pequena lógica de teste para abrir/fechar a janela do bot
+        // Funções globais de interface para abrir e fechar a janela flutuante
         function abrirChat() {
-            document.getElementById('chat-widget').style.display = 'flex';
-            document.getElementById('chat-widget').scrollIntoView({ behavior: 'smooth' });
+            const chat = document.getElementById('chat-widget');
+            chat.style.display = 'flex'; // Exibe o container usando flexbox estruturado no CSS
+            chat.scrollIntoView({ behavior: 'smooth' });
         }
+        
         function fecharChat() {
-            document.getElementById('chat-widget').style.display = 'none';
+            document.getElementById('chat-widget').style.display = 'none'; // Oculta a janela
         }
     </script>
 </body>
